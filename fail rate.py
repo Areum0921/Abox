@@ -5,15 +5,15 @@ def solution(N, stages):
 
     for i in range(1,N+1):
         passer = 0 # 스테이지별 통과자
-        failer = 0 # 현재 스테이지를 못깬사람
+        failure = 0 # 현재 스테이지를 못깬사람
         for j in range(len(stages)):
 
             if(stages[j]>i): #현재 있는 스테이지가 i단계보다 높으면 통과자
                 passer+=1
             elif(stages[j]==i):#현재 단계를 못벗어난 사람
-                failer+=1
+                failure+=1
 
-        print(passer+failer, failer)
+        print(passer+failure, failure)
         print("fail",len(fail_rate),N)
         if(passer==0 and len(fail_rate)<high_stage):
             print("11")
@@ -23,7 +23,7 @@ def solution(N, stages):
             fail_rate.append(0)
         else:
             print("333")
-            fail_rate.append(failer/(passer+failer))
+            fail_rate.append(failure/(passer+failure))
 
     print(fail_rate)
     for i in range(N):
