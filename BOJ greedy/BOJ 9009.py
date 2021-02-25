@@ -15,7 +15,7 @@ def find_fibo(x): # x이하까지 피보나치수 구하기
     use_num=[]
     print(fibo)
     while(1):
-        if(sum+fibo[j]<=x): #큰숫자별로
+        if(sum+fibo[j]<=x): # 사용하는 숫자의 개수를 줄이기위해 큰수부터 더해나간다.
             sum+=fibo[j]
             use_num.append(fibo[j])
         j-=1
