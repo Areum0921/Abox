@@ -14,6 +14,6 @@ def finding(N,M):
             #print(check)
             finding(N,M)
             check[i]=False # 더 이상 방문할곳이 없으면, 이전상태로 되돌리기
-            num_list.pop() # 방문한지 가장 오래된곳 없애기
+            num_list.pop() # 최근 방문한곳 제거
 
 finding(N,M)
