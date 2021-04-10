@@ -27,7 +27,7 @@ def bfs(x):
         if(cnt==x):
             print('모든 탐색이 끝났습니다. bfs 결과 : ', qlist)
         else:
-            print('다음으로 %d 와(과) 이어져 있는 숫자중 작은 숫자를 찾습니다.' % x)
+            print('큐에서 꺼낸 노드와 이웃한 노드들을 탐색합니다.') 
         for i in range(N+1):
             if(check[i]==True and list[x][i]==1):
                 print('숫자',i,'는(은) 방문하지 않았고',x,i,'는 연결되어있습니다.')
@@ -36,15 +36,3 @@ def bfs(x):
                 check[i]=False
 
 bfs(v)
-"""
-def bfs(x):
-    queue=[x]
-    check[x]=False
-    while(queue):
-        x=queue.pop(0)
-        print(x+1, end=' ')
-        for i in range(N):
-            if(check[i]==True and link[x][i]==1):
-                queue.append(i)
-                check[i]=False
-                """
