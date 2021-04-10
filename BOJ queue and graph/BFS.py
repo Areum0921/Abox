@@ -27,7 +27,7 @@ def bfs(x):
         if(cnt==x):
             print('모든 탐색이 끝났습니다. bfs 결과 : ', qlist)
         else:
-            print('다음으로 방문하지 않은 노드중에서 깊이가 얕은 노드를 찾습니다.' % x) 
+            print('큐에서 꺼낸 노드와 이웃한 노드들을 탐색합니다.') 
         for i in range(N+1):
             if(check[i]==True and list[x][i]==1):
                 print('숫자',i,'는(은) 방문하지 않았고',x,i,'는 연결되어있습니다.')
