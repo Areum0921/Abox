@@ -36,15 +36,3 @@ def bfs(x):
                 check[i]=False
 
 bfs(v)
-"""
-def bfs(x):
-    queue=[x]
-    check[x]=False
-    while(queue):
-        x=queue.pop(0)
-        print(x+1, end=' ')
-        for i in range(N):
-            if(check[i]==True and link[x][i]==1):
-                queue.append(i)
-                check[i]=False
-                """
