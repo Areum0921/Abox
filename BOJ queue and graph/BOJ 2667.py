@@ -14,7 +14,7 @@ def dfs(x,y):
     check[x][y]=1 # 방문 표시
     if(board[x][y]==1):
         cnt+=1
-    for i in range(4): # 이부분이 중요하다. 다양한 문제에서 4방향으로 탐색하는 방법!!
+    for i in range(4): # 이부분이 중요하다. 다양한 문제에서 나오는 4방향으로 탐색하는 방법!!
         nx = x+dx[i]
         ny = y+dy[i]
         if((nx>=0 and nx<N) and (ny>=0 and ny<N)): # 살필 수 있는 좌표 범위 [0~n][0~n]
