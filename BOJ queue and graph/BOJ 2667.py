@@ -14,7 +14,7 @@ def dfs(x,y):
     check[x][y]=1 # 방문 표시
     if(board[x][y]==1):
         cnt+=1
-    for i in range(4): # 이부분이 중요하다. 다양한 문제에서 4방향으로 탐색하는 방법!!
+    for i in range(4): # 이부분이 중요하다. 4 방향 탐색문제는 상당히 자주 나오는 느낌
         nx = x+dx[i]
         ny = y+dy[i]
         if((nx>=0 and nx<N) and (ny>=0 and ny<N)): # 살필 수 있는 좌표 범위 [0~n][0~n]
@@ -29,7 +29,7 @@ for i in range(N):
             cnt_list.append(cnt)
             cnt=0
 
-print(len(cnt_list))
+print(len(cnt_list)) # dfs 실행횟수가 곧 아파트 단지 개수
 cnt_list.sort()
 for i in range(len(cnt_list)):
     print(cnt_list[i])
