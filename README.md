@@ -1,7 +1,9 @@
 # Abox
 
-공부한 코딩테스트 소스들을 저장하는 곳 입니다.<br>
+BOJ = 백준 문제
 
-주로 백준, 프로그래머스 문제들 입니다.
+Programmers = 프로그래머스 문제
+
+This is a coding test = 이것이 코딩테스트다 with 파이썬
 
 
