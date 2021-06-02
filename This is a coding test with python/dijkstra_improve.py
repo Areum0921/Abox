@@ -14,7 +14,7 @@ start=int(input()) # 시작 노드 번호
 
 graph= [[] for i in range(n+1)] # 각 노드에 연결된 노드 정보
 
-visited=[False] * (n+1) # 방문 체크
+#visited=[False] * (n+1) # 방문 체크
 
 distance = [INF] * (n+1) # 최단거리(비용) 저장용
 
