@@ -1,22 +1,29 @@
+# 시간 초과
+# permutations를 사용할때 set을 이용해주면 통과하나 시간이 오래걸림
+
 from itertools import permutations
 N = int(input())
 number = list(map(str, input().split(" ")))
-op = list(map(str, input().split(" ")))
+add, sub, mul, div = map(int,input().split(" "))
+sum_op = add + sub + mul + div
 min_value = 99999999
 max_value = -99999999
 op_list=[]
-for i in range(len(op)):
-    for j in range(int(op[i])):
-        if i==0:
-            op_list.append('+')
-        elif i==1:
-            op_list.append('-')
-        elif i==2:
-            op_list.append('*')
-        else:
-            op_list.append('//')
+for i in range(sum_op):
+    if add>0:
+        add-=1
+        op_list.append('+')
+    elif sub>0:
+        sub-=1
+        op_list.append('-')
+    elif mul>0:
+        mul-=1
+        op_list.append('*')
+    elif div>0:
+        div-=1
+        op_list.append('//')
 
-for j in list(permutations(op_list,len(op_list))):
+for j in set(permutations(op_list,len(op_list))): # set으로 중복 제거
     temp = number[0]
     for k in range(1,len(number)):
         if j[k-1]=='//' and int(temp)<0: # 음수 나눌때 양수로 바꾼후 몫을 다시 음수로 전환
